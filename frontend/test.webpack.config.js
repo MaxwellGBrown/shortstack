@@ -16,16 +16,7 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          // create style nodes from JS strings
-          { loader: "style-loader" },
-          {
-            loader: "css-loader",  // translates CSS into CommonJS
-            options: {
-              localIdentName: "[local]",
-              modules: true,
-              sourceMap: true
-            }
-          },
+          { loader: "null-loader" },
           {
             loader: "sass-loader",  // Compile Sass to CSS
             options: {

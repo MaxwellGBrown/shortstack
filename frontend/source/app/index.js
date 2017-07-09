@@ -9,7 +9,6 @@ const mapStateToProps = function(state, ownProps) { return {} };
 
 const mapDispatchToProps = function(dispatch, ownProps) { return {} };
 
-export default connect(mapStateToProps, mapDispatchToProps)(
 class App extends Component {
 
   render () {
@@ -21,5 +20,8 @@ class App extends Component {
       </div>
     );
   }
-})
+}
 
+export { App };
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
