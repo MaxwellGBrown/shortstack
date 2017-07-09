@@ -21,3 +21,22 @@ Quickstart
   $ docker-compose run shortstack-frontend npm run webpack
 
   $ docker-compose up -d
+
+
+Tests
+=====
+
+Tests suites are included!
+
+Backend Tests
+-------------
+
+.. code-block::
+
+  $ docker-compose run shortstack-backend py.test
+
+or 
+
+.. code-block::
+
+  $ docker exec -it shorstack-backend py.test
