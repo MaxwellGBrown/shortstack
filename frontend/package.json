@@ -1,0 +1,38 @@
+{
+  "name": "halfstack-frontend",
+  "version": "0.0.0",
+  "description": "Frontend Application for shortstack",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node_modules/.bin/serve",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "node_modules/.bin/webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxwellGBrown/halfstack.git"
+  },
+  "author": "maxwellgbrown@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaxwellGBrown/halfstack/issues"
+  },
+  "homepage": "https://github.com/MaxwellGBrown/halfstack#readme",
+  "dependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2016": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "css-loader": "^0.28.0",
+    "node-sass": "^4.5.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.4",
+    "redux": "^3.6.0",
+    "sass-loader": "^6.0.3",
+    "serve": "^5.1.3",
+    "style-loader": "^0.16.1",
+    "webpack": "^2.3.2"
+  }
+}

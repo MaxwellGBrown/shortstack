@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  shortstack-frontend:
+    build: ./frontend
+    container_name: shortstack-frontend
+    ports:
+      - "9876:80"
+    volumes:
+      - ./frontend:/shortstack-frontend
+  shortstack-backend:
+    build: ./backend
+    container_name: shortstack-backend
+    ports:
+      - "9875:80"
+    volumes:
+      - ./backend:/shortstack-backend

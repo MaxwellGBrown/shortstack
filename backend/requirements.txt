@@ -1,0 +1,2 @@
+gunicorn==19.7.0
+pyramid==1.8.1
