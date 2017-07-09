@@ -31,12 +31,18 @@ Tests suites are included!
 Backend Tests
 -------------
 
-.. code-block::
-
-  $ docker-compose run shortstack-backend py.test
-
-or 
+While the ``shortstack-backend`` container is running...
 
 .. code-block::
 
   $ docker exec -it shorstack-backend py.test
+
+
+Frontend Tests
+--------------
+
+While the ``shortstack-frontend`` container is running...
+
+.. code-block::
+
+  $ docker exec -it shortstack-frontend npm run test
