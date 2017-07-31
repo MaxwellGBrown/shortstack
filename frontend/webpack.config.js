@@ -1,40 +1,18 @@
-const path = require("path");
+const merge = require('webpack-merge');
 
-module.exports = {
-  entry: "./source/index.js",
-  output: {
-    path: path.resolve(__dirname, "dist") ,
-    filename: "bundle.js"
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        use: { loader: 'babel-loader' },
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          // create style nodes from JS strings
-          { loader: "style-loader" },
-          {
-            loader: "css-loader",  // translates CSS into CommonJS
-            options: {
-              localIdentName: "[local]",
-              modules: true,
-              sourceMap: true
-            }
-          },
-          {
-            loader: "sass-loader",  // Compile Sass to CSS
-            options: {
-              includePaths: ["source/styles"],
-              sourceMap: true
-            }
-          }
-        ]
-      }
-    ] 
+const commonConfig = require('./webpack/common');
+const developmentConfig = require('./webpack/development');
+const productionConfig = require('./webpack/production');
+
+module.exports = () => {
+  switch (process.env.NODE_ENV) {
+    case 'production':
+      return merge(commonConfig, productionConfig);
+    case 'development':
+      return merge(commonConfig, developmentConfig);
+    default:
+      console.warn('No webpack configuration was found for NODE_ENV=' + process.env.NODE_ENV + '.');
+      console.warn('Defaulting to development.\n');
+      return merge(commonConfig, developmentConfig);
   }
 };
