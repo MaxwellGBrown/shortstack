@@ -1,24 +1,28 @@
 const path = require("path");
+const merge = require("webpack-merge");
 
 module.exports = {
+
   entry: "./source/index.js",
+
   output: {
-    path: path.resolve(__dirname, "dist") ,
+    path: path.resolve(__dirname, "..", "dist"),
     filename: "bundle.js"
   },
+
   module: {
     rules: [
-      {
+      {  // Load JavaScript via Babel
         test: /\.(js|jsx)$/,
-        use: { loader: 'babel-loader' },
+        use: { loader: "babel-loader" },
         exclude: /node_modules/,
       },
+
       {
         test: /\.scss$/,
         use: [
-          { loader: "null-loader" },
-          {
-            loader: "sass-loader",  // Compile Sass to CSS
+          {  // Compile Sass to CSS
+            loader: "sass-loader",
             options: {
               includePaths: ["source/styles"],
               sourceMap: true
@@ -28,4 +32,5 @@ module.exports = {
       }
     ] 
   }
+
 };
