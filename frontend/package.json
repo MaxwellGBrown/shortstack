@@ -4,7 +4,8 @@
   "description": "Frontend Application for shortstack",
   "main": "index.js",
   "scripts": {
-    "serve": "node_modules/.bin/serve",
+    "eslint": "eslint source",
+    "serve": "serve",
     "test": "BABEL_DISABLE_CACHE=1 NODE_ENV=test ava $(pwd)/tests/test_*.js",
     "webpack": "webpack"
   },
@@ -40,8 +41,15 @@
   },
   "devDependencies": {
     "ava": "^0.20.0",
+    "babel-eslint": "^7.2.3",
     "chai": "^4.0.2",
     "enzyme": "^2.9.1",
+    "eslint": "^4.4.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.2.0",
     "ignore-styles": "^5.0.1"
   },
   "ava": {

@@ -1,0 +1,31 @@
+{
+  "env": { "browser": true },
+
+  "extends": [
+    "airbnb-base",
+    "plugin:react/recommended"
+  ],
+
+  "parser": "babel-eslint",
+
+  "plugins": ["react"],
+
+  "rules": {
+    "import/no-named-as-default": "off",
+    "quotes": ["warn", "double"],
+    "react/sort-comp": ["warn", {
+      order: [
+        "static-methods",
+        "lifecycle",
+        "everything-else",
+        "rendering",
+      ],
+      groups: {
+        rendering: [
+          "/^render.+$/",
+          "render"
+        ]
+      }
+    }]
+  }
+}

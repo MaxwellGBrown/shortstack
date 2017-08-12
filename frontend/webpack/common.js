@@ -1,4 +1,4 @@
-const path = require("path");
+var path = require("path");
 
 module.exports = {
 
@@ -13,7 +13,10 @@ module.exports = {
     rules: [
       {  // Load JavaScript via Babel
         test: /\.(js|jsx)$/,
-        use: { loader: "babel-loader" },
+        use: [
+          { loader: "babel-loader" },
+          { loader: "eslint-loader" }
+        ],
         exclude: /node_modules/,
       },
 
