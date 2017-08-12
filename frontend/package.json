@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "serve": "node_modules/.bin/serve",
-    "test": "BABEL_DISABLE_CACHE=1 NODE_ENV=test ava $(pwd)/test.js",
+    "test": "BABEL_DISABLE_CACHE=1 NODE_ENV=test ava $(pwd)/tests/test_*.js",
     "webpack": "webpack"
   },
   "repository": {
@@ -48,7 +48,7 @@
     "babel": "inherit",
     "require": [
       "babel-register",
-      "ignore-styles"
+      "./tests/utils/ignore-styles"
     ]
   }
 }
