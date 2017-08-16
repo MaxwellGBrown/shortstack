@@ -4,6 +4,7 @@
   "description": "Frontend Application for shortstack",
   "main": "index.js",
   "scripts": {
+    "check": "npm run eslint && npm run test",
     "eslint": "eslint source",
     "serve": "serve",
     "test": "BABEL_DISABLE_CACHE=1 NODE_ENV=test ava $(pwd)/tests/test_*.js",
