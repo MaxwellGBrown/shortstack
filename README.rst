@@ -7,6 +7,14 @@ Backend is a python API implemented w/ pyramid & sqlalchemy.
 
 Frontend is a JavaScript frontend app implemented w/ React & Sass.
 
+**Why not a JavaScript backend?**
+
+This shortstack is here to provide a learning experience for implementing disjoined front/backend applications. It's a great excuse to explore...
+
+* Writing an API
+* Creating an unattached frontend 
+* Using docker-compose & docker networks
+
 Quickstart
 ==========
 
