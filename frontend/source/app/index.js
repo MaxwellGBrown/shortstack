@@ -1,13 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import stylesheet from "../styles/main.scss";
+import Header from "./header";
 
 const App = () => (
   <div>
-    <h1 className={stylesheet.header}>
+    <Header>
       Shortstack
-    </h1>
+    </Header>
   </div>
 );
 

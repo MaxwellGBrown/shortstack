@@ -3,10 +3,10 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { expect } from 'chai';
 
-import { App } from '../source/app';
+import Header from '../source/app/header';
 
-test('<App /> contains <h1 class="header">', (t) => {
-  const app = shallow(<App />);
+test('<Header /> contains <h1 class="header">', (t) => {
+  const app = shallow(<Header>Test</Header>);
 
   expect(app.find('h1.header')).to.have.length(1);
   t.pass();
